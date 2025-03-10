@@ -10,6 +10,7 @@ import utils.TestDataFaker;
 
 import static io.qameta.allure.Allure.step;
 
+@Tag("demoqa")
 public class PracticeFormTests extends TestBase {
 
     private final StudentRegistrationPage studentRegistrationPage = new StudentRegistrationPage();
