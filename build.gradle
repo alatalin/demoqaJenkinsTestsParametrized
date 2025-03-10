@@ -53,11 +53,11 @@ tasks.withType(Test) {
 
 task demoqa_test_poz(type: Test) {
     useJUnitPlatform {
-        includeTags("Smoke","Positive")
+        includeTags("Positive")
     }
 }
 task demoqa_test_neg(type: Test) {
     useJUnitPlatform {
-        includeTags("Smoke","Negative")
-    }    
+        includeTags("Negative")
+    }
 }

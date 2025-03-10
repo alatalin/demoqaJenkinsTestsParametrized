@@ -18,7 +18,6 @@ public class PracticeFormTests extends TestBase {
     @Test
     @DisplayName("Полное заполнение формы")
     @Tags({
-            @Tag("Smoke"),
             @Tag("Positive")
     })
     @Owner("alatalin")
@@ -60,7 +59,6 @@ public class PracticeFormTests extends TestBase {
     @Test
     @DisplayName("Минимальное заполнение формы")
     @Tags({
-            @Tag("Smoke"),
             @Tag("Positive")
     })
     @Owner("alatalin")
@@ -87,7 +85,6 @@ public class PracticeFormTests extends TestBase {
     @Test
     @DisplayName("Невалидный номер телефона")
     @Tags({
-            @Tag("Smoke"),
             @Tag("Negative")
     })
     @Owner("alatalin")
