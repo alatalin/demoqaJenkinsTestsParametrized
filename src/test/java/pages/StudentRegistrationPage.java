@@ -48,80 +48,80 @@ public class StudentRegistrationPage {
 
     @Step("Заполняем имя")
     public StudentRegistrationPage setFirstName(String value) {
-        firstNameInput.setValue(value);
+        firstNameInput.scrollTo().setValue(value);
         return this;
     }
 
     @Step("Заполняем фамилию")
     public StudentRegistrationPage setLastName(String value) {
-        lastNameInput.setValue(value);
+        lastNameInput.scrollTo().setValue(value);
         return this;
     }
 
     @Step("Заполняем электронную почту")
     public StudentRegistrationPage setUserEmail(String value) {
-        userEmailInput.setValue(value);
+        userEmailInput.scrollTo().setValue(value);
         return this;
     }
 
     @Step("Выбираем пол")
     public StudentRegistrationPage setGenderWrapper(String value) {
-        genderWrapperInput.$(byText(value)).click();
+        genderWrapperInput.$(byText(value)).scrollTo().click();
         return this;
     }
 
     @Step("Заполняем телефон")
     public StudentRegistrationPage setUserNumber(String value) {
-        userNumberInput.setValue(value);
+        userNumberInput.scrollTo().setValue(value);
         return this;
     }
 
     @Step("Заполняем дату рождения")
     public StudentRegistrationPage setDateOfBirth(String day, String month, String year) {
-        dateOfBirthInput.click();
+        dateOfBirthInput.scrollTo().click();
         calendarComponent.setDate(day, month, year);
         return this;
     }
 
     @Step("Выбираем предмет")
     public StudentRegistrationPage setSubjects(String subject) {
-        subjectsInput.setValue(subject).pressEnter();
+        subjectsInput.scrollTo().setValue(subject).pressEnter();
         return this;
     }
 
     @Step("Выбираем хобби")
     public StudentRegistrationPage setHobbies(String value) {
-        hobbies.$(byText(value)).click();
+        hobbies.$(byText(value)).scrollTo().click();
         return this;
     }
 
     @Step("Загружаем картинку")
     public StudentRegistrationPage imageUpload(String value) {
-        imageUpload.uploadFromClasspath(value);
+        imageUpload.scrollTo().uploadFromClasspath(value);
         return this;
     }
 
     @Step("Заполняем фактический адрес")
     public StudentRegistrationPage setCurrentAddress(String value) {
-        currentAddressInput.setValue(value);
+        currentAddressInput.scrollTo().setValue(value);
         return this;
     }
 
     @Step("Выбираем штат")
     public StudentRegistrationPage setUserState(String value) {
-        userStateInput.setValue(value).pressEnter();
+        userStateInput.scrollTo().setValue(value).pressEnter();
         return this;
     }
 
     @Step("Выбираем город")
     public StudentRegistrationPage setUserCity(String value) {
-        userCityInput.setValue(value).pressEnter();
+        userCityInput.scrollTo().setValue(value).pressEnter();
         return this;
     }
 
     @Step("Нажимаем на кнопку 'Submit'")
     public StudentRegistrationPage submitButtonClick() {
-        submitButton.click();
+        submitButton.scrollTo().click();
         return this;
     }
 

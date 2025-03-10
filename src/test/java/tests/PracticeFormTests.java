@@ -1,14 +1,15 @@
 package tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import pages.StudentRegistrationPage;
 import utils.TestDataFaker;
 
 import static io.qameta.allure.Allure.step;
 
-@Tag("demoqa")
 public class PracticeFormTests extends TestBase {
 
     private final StudentRegistrationPage studentRegistrationPage = new StudentRegistrationPage();
@@ -16,6 +17,11 @@ public class PracticeFormTests extends TestBase {
 
     @Test
     @DisplayName("Полное заполнение формы")
+    @Tags({
+            @Tag("Smoke"),
+            @Tag("Positive")
+    })
+    @Owner("alatalin")
     public void succesfullFillAllPracticeFormTest() {
         step("Открываем форму", () -> {
             studentRegistrationPage.openPage()
@@ -53,6 +59,11 @@ public class PracticeFormTests extends TestBase {
 
     @Test
     @DisplayName("Минимальное заполнение формы")
+    @Tags({
+            @Tag("Smoke"),
+            @Tag("Positive")
+    })
+    @Owner("alatalin")
     public void succesfullMimimumDataPracticeFormTest() {
         step("Открываем форму", () -> {
             studentRegistrationPage.openPage()
@@ -75,6 +86,11 @@ public class PracticeFormTests extends TestBase {
 
     @Test
     @DisplayName("Невалидный номер телефона")
+    @Tags({
+            @Tag("Smoke"),
+            @Tag("Negative")
+    })
+    @Owner("alatalin")
     public void notValidPhoneNumberPracticeFormTest() {
         step("Открываем форму", () -> {
             studentRegistrationPage.openPage()
